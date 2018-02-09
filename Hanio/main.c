@@ -20,13 +20,14 @@ int main(int argc, const char * argv[]) {
     initStack(x,'x');
     initStack(y,'y');
     initStack(z,'z');
-    push(x, 3);
-    push(x, 2);
-    push(x, 1);
+    push(x, 3);//圆盘3
+    push(x, 2);//圆盘2
+    push(x, 1);//圆盘1
     printf("塔座x上的圆盘的编号从小到大是:\n");
     while(!stackEmpty(x)){
         printf("%d\t",pop(x));
     }
+    //上面把x上的元素都取出来了，现在再放入一次
     push(x, 3);
     push(x, 2);
     push(x, 1);
