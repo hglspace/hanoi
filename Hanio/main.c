@@ -48,11 +48,11 @@ int main(int argc, const char * argv[]) {
 void hanoi(int n,struct sqstack * x,struct sqstack * y,struct sqstack * z){
     void moveAction(struct sqstack * x,struct sqstack * y);
     if(n==1){
-        moveAction(x, z);
+        moveAction(x, z);//将编号为1的圆盘从x移到z
     }else{
-        hanoi(n-1, x, z, y);
-        moveAction(x, z);
-        hanoi(n-1, y, x, z);
+        hanoi(n-1, x, z, y);//将x上编号为1至n-1的圆盘移到y,z作辅助塔
+        moveAction(x, z);//将编号为n的圆盘从x移至z
+        hanoi(n-1, y, x, z);//将y上编号为1至n-1的圆盘移到z,x作辅助塔
     }
 }
 
